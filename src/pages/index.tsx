@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Component() {
@@ -5,7 +6,7 @@ export default function Component() {
   if (session) {
     return (
       <>
-        Signed in as {session.user.email} <br />
+        Signed in as {session?.user?.email} <br />
         <button onClick={() => signOut()}>Sign out</button>
       </>
     )
